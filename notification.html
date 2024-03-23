@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodTime Notifications</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .notification-icon {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .notification-count {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: #ff6347; /* Tomato color */
+            color: #fff;
+            border-radius: 50%;
+            padding: 5px;
+            font-size: 12px;
+        }
+
+        .notification-list {
+            display: none;
+            position: absolute;
+            top: 40px;
+            right: 10px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(100, 73, 73, 0.1);
+            border-radius: 8px;
+            padding: 10px;
+            max-width: 300px;
+            z-index: 1;
+        }
+
+        .notification-item {
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>FoodTime Website</h1>
+        <div class="notification-icon" onclick="toggleNotifications()">
+            <span class="notification-count">3</span>
+            📬 <!-- You can use an icon here -->
+            <div class="notification-list">
+                <div class="notification-item">New order received</div>
+                <div class="notification-item">Delivery on the way</div>
+                <div class="notification-item">Feedback received</div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Main content of the website -->
+    </main>
+
+    <script>
+        function toggleNotifications() {
+            var notificationList = document.querySelector('.notification-list');
+            notificationList.style.display = (notificationList.style.display === 'block') ? 'none' : 'block';
+        }
+    </script>
+
+</body>
+</html>
